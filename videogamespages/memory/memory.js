@@ -126,7 +126,7 @@ function startLevel() {
   let images = [];
 
   for (let i = 1; i <= neededPairs; i++) {
-    images.push(`/videogamespages/memory/assets/img/${i}.jpg`);
+    images.push(`videogamespages/memory/assets/img/${i}.jpg`);
   }
 
   const cardsArray =
