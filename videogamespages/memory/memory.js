@@ -126,7 +126,7 @@ function startLevel() {
   let images = [];
 
   for (let i = 1; i <= neededPairs; i++) {
-    images.push(`./assets/img/${i}.jpg`);
+    images.push(`assets/img/${i}.jpg`);
   }
 
   const cardsArray =
