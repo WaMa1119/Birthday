@@ -1,0 +1,339 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   ROOT
+========================= */
+
+:root {
+  --bg: #fff4f7;
+  --card: #ffffff;
+  --text: #ff4f87;
+  --muted: #d88ca4;
+  --border: #ffc4d6;
+  --accent: #ff77a8;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+  background: var(--bg);
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  min-height: 100vh;
+
+  color: var(--text);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 1rem;
+
+  margin-bottom: 2rem;
+}
+
+/* =========================
+   BACK LINK
+========================= */
+
+.back-link {
+  text-decoration: none;
+
+  color: var(--text);
+
+  border: 1px solid var(--border);
+
+  padding: 0.9rem 1.2rem;
+
+  border-radius: 14px;
+
+  transition: 0.3s ease;
+}
+
+.back-link:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* =========================
+   LEVEL BOX
+========================= */
+
+.level-box {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 0.3rem;
+
+  font-size: 0.8rem;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.title {
+  font-size: clamp(2rem, 5vw, 4rem);
+
+  margin-bottom: 0.8rem;
+}
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.subtitle {
+  color: var(--muted);
+
+  margin-bottom: 3rem;
+
+  letter-spacing: 0.2rem;
+
+  text-align: center;
+}
+
+/* =========================
+   BOARD
+========================= */
+
+.game-board {
+  width: 100%;
+  max-width: 1000px;
+
+  display: grid;
+
+  gap: 1rem;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  position: relative;
+
+  aspect-ratio: 1 / 1;
+
+  cursor: pointer;
+
+  transform-style: preserve-3d;
+
+  transition: transform 0.6s;
+
+  border-radius: 20px;
+}
+
+/* =========================
+   FLIP
+========================= */
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+/* =========================
+   FACE
+========================= */
+
+.face {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   FRONT
+========================= */
+
+.front {
+  background: white;
+
+  border: 2px solid var(--border);
+
+  font-size: 2rem;
+
+  transform: rotateY(0deg);
+}
+
+/* =========================
+   BACK
+========================= */
+
+.back {
+  transform: rotateY(180deg);
+}
+
+/* =========================
+   IMAGES
+========================= */
+
+.front img,
+.back img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+  margin-top: 2rem;
+
+  min-height: 40px;
+
+  text-align: center;
+
+  font-size: 1rem;
+}
+
+/* =========================
+   FINAL SCREEN
+========================= */
+
+.final-screen {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 2rem;
+
+  z-index: 100;
+}
+
+.final-screen h2 {
+  font-size: 2rem;
+
+  margin-bottom: 1rem;
+}
+
+.final-screen p {
+  margin-bottom: 2rem;
+
+  color: var(--muted);
+}
+
+.code {
+  background: white;
+
+  border: 2px solid var(--border);
+
+  padding: 1rem 2rem;
+
+  border-radius: 20px;
+
+  font-size: 1rem;
+
+  word-break: break-word;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .container {
+    padding: 1rem;
+  }
+
+  .topbar {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .back-link {
+    text-align: center;
+  }
+
+  .level-box {
+    align-items: center;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+
+    line-height: 1.8;
+  }
+
+  .game-board {
+    gap: 0.7rem;
+  }
+}

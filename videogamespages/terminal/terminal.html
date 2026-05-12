@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Terminal.ask</title>
+
+  <link rel="stylesheet" href="terminal.css" />
+</head>
+
+<body>
+
+  <main class="terminal-container">
+
+    <!-- TOP -->
+
+    <div class="topbar">
+
+      <a href="./../../games.html" class="back-link">
+        ← VOLVER
+      </a>
+
+      <span class="system-text">
+        TERMINAL.ask
+      </span>
+
+    </div>
+
+    <!-- TERMINAL -->
+
+    <section class="terminal">
+
+      <div id="terminalOutput" class="terminal-output"></div>
+
+      <div class="input-line">
+
+        <span class="prompt">></span>
+
+        <input
+          type="text"
+          id="terminalInput"
+          autocomplete="off"
+          autofocus
+        />
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="terminal.js"></script>
+
+</body>
+
+</html>

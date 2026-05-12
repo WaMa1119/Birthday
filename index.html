@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sorpresa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <main class="container">
+
+    <!-- TOP BAR -->
+
+    <div class="topbar">
+
+      <a href="games.html" class="games-link">
+        VIDEOJUEGOS
+      </a>
+
+    </div>
+
+    <!-- CONTENT -->
+
+    <section class="content">
+
+      <h1 id="countdown" class="countdown">
+        00:00:00:00
+      </h1>
+
+      <p class="subtitle">
+        QUE EL JUEGO COMIENCE, DESBLOQUEA CODIGOS PARA DISMINUIR EL TIEMPO
+      </p>
+
+      <!-- INPUT -->
+
+      <div class="code-container">
+
+        <input
+          type="text"
+          id="codeInput"
+          class="code-input"
+          placeholder="INGRESAR CÓDIGO"
+        />
+
+        <button id="submitBtn" class="submit-btn">
+          ENTER
+        </button>
+
+      </div>
+
+      <p id="message" class="message"></p>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

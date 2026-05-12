@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Memory.exe</title>
+
+  <link rel="stylesheet" href="memory.css" />
+</head>
+
+<body>
+
+  <main class="container">
+
+    <!-- TOPBAR -->
+
+    <div class="topbar">
+
+      <a href="./../../games.html" class="back-link">
+        ← VOLVER
+      </a>
+
+      <div class="level-box">
+        <span id="levelText">NIVEL 1</span>
+        <span id="movesText">MOVIMIENTOS: 0</span>
+      </div>
+
+    </div>
+
+    <!-- CONTENT -->
+
+    <section class="content">
+
+      <h1 class="title">
+        🧠 Memory.exe
+      </h1>
+
+      <p class="subtitle">
+        ENCUENTRA TODOS LOS RECUERDOS
+      </p>
+
+      <!-- GAME BOARD -->
+
+      <div id="gameBoard" class="game-board"></div>
+
+      <!-- MESSAGE -->
+
+      <div id="message" class="message"></div>
+
+    </section>
+
+  </main>
+
+  <!-- SOUNDS -->
+
+  <audio id="flipSound" src="./assets/sounds/flip.mp3"></audio>
+  <audio id="successSound" src="./assets/sounds/success.mp3"></audio>
+  <audio id="failSound" src="./assets/sounds/fail.mp3"></audio>
+  <audio id="winSound" src="./assets/sounds/win.mp3"></audio>
+
+  <script src="memory.js"></script>
+
+</body>
+
+</html>

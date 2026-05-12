@@ -1,0 +1,338 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   ROOT
+========================= */
+
+:root {
+  --bg: #050505;
+  --text: #ffffff;
+  --muted: #7a7a7a;
+  --border: #2a2a2a;
+  --accent: #ffffff;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+  background: var(--bg);
+  color: var(--text);
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  min-height: 100vh;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+}
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* =========================
+   BACK LINK
+========================= */
+
+.back-link {
+  color: var(--text);
+
+  text-decoration: none;
+
+  border: 1px solid var(--border);
+
+  padding: 0.9rem 1.4rem;
+
+  font-size: 0.8rem;
+  letter-spacing: 0.3rem;
+
+  transition: 0.3s ease;
+}
+
+.back-link:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  width: 100%;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+
+  margin-bottom: 1rem;
+
+  letter-spacing: 0.4rem;
+}
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.subtitle {
+  color: var(--muted);
+
+  letter-spacing: 0.3rem;
+
+  font-size: 0.8rem;
+
+  margin-bottom: 4rem;
+
+  max-width: 700px;
+
+  line-height: 1.8;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.games-grid {
+  width: 100%;
+  max-width: 1200px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 1.5rem;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.game-card {
+  border: 1px solid var(--border);
+
+  padding: 2rem;
+
+  text-decoration: none;
+
+  color: var(--text);
+
+  font-size: 1rem;
+
+  letter-spacing: 0.15rem;
+
+  transition: 0.3s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  min-height: 120px;
+}
+
+.game-card:hover {
+  border-color: var(--accent);
+
+  transform: translateY(-4px);
+}
+.game-card-unavailable {
+  border: 1px solid var(--border);
+
+  padding: 2rem;
+
+  color: var(--muted);
+  background: var(--border);
+
+  font-size: 1rem;
+
+  letter-spacing: 0.15rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  min-height: 120px;
+  text-decoration: line-through;
+}
+.game-card-unavailable:hover {
+  border-color: var(--border);
+
+  transform: none;
+}
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+  .games-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .title {
+    letter-spacing: 0.25rem;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .container {
+    padding: 1.2rem;
+  }
+
+  .topbar {
+    margin-bottom: 2rem;
+  }
+
+  .back-link {
+    width: 100%;
+
+    text-align: center;
+
+    padding: 1rem;
+  }
+
+  .content {
+    justify-content: flex-start;
+  }
+
+  .title {
+    font-size: 2rem;
+
+    letter-spacing: 0.15rem;
+
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    font-size: 0.7rem;
+
+    letter-spacing: 0.2rem;
+
+    margin-bottom: 2.5rem;
+
+    line-height: 1.7;
+
+    padding: 0 0.5rem;
+  }
+
+  .games-grid {
+    grid-template-columns: 1fr;
+
+    gap: 1rem;
+  }
+
+  .game-card {
+    min-height: 90px;
+
+    font-size: 0.9rem;
+
+    padding: 1.2rem;
+
+    letter-spacing: 0.1rem;
+  }
+
+  .game-card:hover {
+    transform: none;
+  }
+
+.game-card-unavailable {
+    min-height: 90px;
+
+    font-size: 0.9rem;
+
+    padding: 1.2rem;
+
+    letter-spacing: 0.1rem;
+  }
+
+  .game-card-unavailable:hover {
+    transform: none;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .container {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+
+  .subtitle {
+    font-size: 0.65rem;
+  }
+
+  .game-card {
+    min-height: 80px;
+
+    font-size: 0.8rem;
+
+    padding: 1rem;
+  }
+  .game-card-unavailable {
+    min-height: 80px;
+
+    font-size: 0.8rem;
+
+    padding: 1rem;
+  }
+}
