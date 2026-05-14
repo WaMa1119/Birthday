@@ -131,7 +131,7 @@ function update() {
       scoreText.innerHTML =
         score;
 
-      if (score >= 30) {
+      if (score >= 22) {
 
         finishGame();
       }
@@ -240,6 +240,10 @@ function endGame() {
 
   startText.innerHTML =
     "GAME OVER 💔";
+
+    setTimeout(() => {
+        location.reload(); // Recarga la página después de 0.1 segundo
+    }, 1 * 500);
 }
 
 // =========================
