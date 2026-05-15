@@ -232,3 +232,31 @@ body {
     text-align: center;
   }
 }
+
+
+/* =========================
+   GIFT BUTTON
+========================= */
+
+.gift-btn {
+  display: none;
+
+  margin-top: 2rem;
+
+  text-decoration: none;
+
+  color: var(--text);
+
+  border: 1px solid var(--border);
+
+  padding: 1rem 2rem;
+
+  letter-spacing: 0.3rem;
+
+  transition: 0.3s ease;
+}
+
+.gift-btn:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}

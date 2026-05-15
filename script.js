@@ -23,7 +23,8 @@ const codes = {
   ERESDEMASIADOBUENAPARATODO56532: 12,
   MESALVASTE65321: 12,
   ERESLAMEJORPRINCESA221155: 12,
-  SEP112029: 12
+  SEP112029: 12,
+  FELIZCUMPLEAÑOS2026: 200,
 };
 
 // =========================
@@ -42,6 +43,9 @@ const submitBtn =
 const message =
   document.getElementById("message");
 
+  const giftBtn =
+  document.getElementById("giftBtn");
+
 // =========================
 // COUNTDOWN
 // =========================
@@ -58,6 +62,8 @@ function updateCountdown() {
 
   if (distance <= 0) {
     countdown.innerHTML = "00:00:00:00";
+    giftBtn.style.display =
+    "inline-block";
     return;
   }
 
